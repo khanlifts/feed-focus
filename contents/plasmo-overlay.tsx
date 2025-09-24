@@ -2,7 +2,7 @@ import cssText from "data-text:~/contents/plasmo-overlay.css"
 import type { PlasmoCSConfig } from "plasmo"
 
 export const config: PlasmoCSConfig = {
-  matches: ["https://www.plasmo.com/*"],
+  matches: ["https://www.linkedin.com/*"],
   css: ["font.css"]
 }
 
@@ -14,14 +14,24 @@ export const getStyle = () => {
 
 const PlasmoOverlay = () => {
   return (
-    <span
-      className="hw-top"
-      style={{
-        padding: 12
-      }}>
-      CSUI OVERLAY FIXED POSITION
-    </span>
+    <div className="feed-focus-overlay">
+      <h2 className="feed-focus-title">Feed Focus</h2>
+
+      <div className="switch-item">
+        <label className="switch-label">Hide Notifications</label>
+        <span>🟢</span>
+      </div>
+
+      <div className="switch-item">
+        <label className="switch-label">Hide Messages</label>
+        <span>🟢</span>
+      </div>
+
+      <div className="switch-item">
+        <label className="switch-label">Hide Feed</label>
+        <span>🟢</span>
+      </div>
+    </div>
   )
 }
-
 export default PlasmoOverlay
